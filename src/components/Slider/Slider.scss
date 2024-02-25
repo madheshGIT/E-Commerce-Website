@@ -1,0 +1,19 @@
+@import "../../App.scss";
+
+.hero-slider1{
+    &-item{
+        height:280px;
+        width:auto;
+        @media screen and (max-width:575px){
+            height:50vh;
+    }    
+        img{
+            height:100%;
+            width:100%;
+            object-fit: cover;
+          
+            }
+        
+    }
+  
+}

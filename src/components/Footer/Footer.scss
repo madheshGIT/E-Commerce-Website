@@ -1,0 +1,56 @@
+@import "../../App.scss";
+.footer{
+        background-image: url("https://mftgroup.com.ph/wp-content/uploads/2018/02/footer-background-image.jpg");
+        background-repeat: repeat;
+        background-size: cover;
+    .footer-content{
+        row-gap: 20px;
+        .footer-item{
+            ul{
+                li{
+                    margin: 0.7rem 0;
+                    opacity: 0.8;
+                    transition: $transition;
+                    &:hover{
+                        opacity: 1;
+                    }
+                }
+            }
+
+            &:nth-child(4){
+                ul{
+                    li{
+                        span{
+                            &:first-child{
+                                margin-right: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (min-width: 768px){
+            grid-template-columns: repeat(2, 1fr);
+            .footer-item{
+                text-align: left;
+            }
+        }
+
+        @media screen and (min-width: 992px){
+            grid-template-columns: repeat(4, 1fr);
+            .footer-item{
+                text-align: left;
+            }
+        }
+    }
+}
+.copy{
+    text-align: center;
+    color:rgb(97, 97, 97);
+    background-color: rgb(35, 35, 35);
+    width: fit-content;
+    margin: auto;
+    padding: 4px 4px;
+    border-radius: 5px;
+}

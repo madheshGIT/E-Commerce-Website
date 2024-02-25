@@ -1,0 +1,71 @@
+@import "../../App.scss";
+
+.product-items{
+    row-gap: 25px;
+    .product-item{
+        cursor: pointer;
+        box-shadow: rgba(99, 99, 99, 0.05) 0px 2px 8px 0px;
+        padding: 15px;
+        border-radius: 10px;
+        transition: $transition;
+        background-color: rgba(178, 211, 247, 0.35);
+        transition: transform 0.5s ease;
+        &-body{
+            padding: 12px 0;
+        }
+
+        &-img{
+            border: solid rgb(149, 149, 247);
+            position: relative;
+.product-item-cat{
+                position: absolute;
+                top: 8px;
+                right: 8px;
+                border-radius: 8px;
+                padding-right: 8px;
+                padding-left: 8px;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            }
+        }
+
+        &-title{
+            padding: 8px 0;
+            opacity: 0.8;
+            display: block;
+            color: rgb(3, 53, 178);
+            font-weight: 500;
+           
+        }
+        &:hover{
+            box-shadow: rgba(0, 0, 250, 0.2) 0px 2px 8px 0px;
+            transform: scale(1.1);
+        }
+    }
+    .product-item-price{
+        color:rgb(118, 102, 158);
+    }
+    @media screen and (max-width:575px){
+        grid-template-columns: 300px;
+        justify-content: center;
+        row-gap: 35px;
+    }
+    @media screen and (min-width: 576px){
+        grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+    }
+
+    @media screen and (min-width: 768px){
+        grid-template-columns: repeat(3, 1fr);
+            column-gap: 20px;
+    }
+
+    @media screen and (min-width: 992px){
+        grid-template-columns: repeat(4, 1fr);
+            column-gap: 20px;
+    }
+
+    @media screen and (min-width: 1200px){
+        grid-template-columns: repeat(5, 1fr);
+            column-gap: 20px;
+    }
+}

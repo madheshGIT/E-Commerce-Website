@@ -1,0 +1,47 @@
+@import "../../App.scss";
+
+.category-items {
+  row-gap: 20px;
+  .category-item {
+    &-img {
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    &-name {
+      padding: 12px 0;
+    }
+    &:hover {
+      .category-item-img {
+        transform: scale(1.1); 
+      }
+    }
+  }
+ 
+ @media screen and (max-width:575px){
+  grid-template-columns: 300px;
+  justify-content: center;
+ }
+  @media screen and (min-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+  }
+
+  @media screen and (min-width: 992px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media screen and (min-width: 1400px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.section-title{
+    color:rgba(7, 110, 255, 0.988) ;
+}
+.category-item-name{
+    color:rgb(103, 84, 153) ;
+}
